@@ -1,3 +1,4 @@
+import rodados.*
 import wollok.game.*
 
 import example.pepita
@@ -15,4 +16,37 @@ program PepitaGame {
 	game.showAttributes(pepita) //Debug
 
 	game.start()
+}
+
+
+
+describe "test de todados" {
+
+	const deportes = new Dependencia(empleados = 45)
+	const cultura = new Dependencia(empleados = 31)
+	const cachito = new Corsa(color"rojo")
+
+	method initialize(){
+		deportes.agregarAFlota(cachito)
+		deportes.agregarAFlota(new Corsa(color = "azul"))
+		deportes.agregarAFlota(new Corsa(color = "verde"))
+		deportes.agregarAFlota(new Kwild(tieneTanqueAdicional = tanque))
+		deportes.agregarAFlota(new AutoEspecial
+		(capacidad=5,velocidad=160,peso=1200,color="beige"))
+
+
+		cultura.agregarAFlota(cachito)
+		cultura.agregarAFlota(new Corsa(color = "azul"))
+		cultura.agregarAFlota(new Corsa(color = "verde"))
+		cultura.agregarAFlota(new Kwild(tieneTanqueAdicional = tanque))
+		cultura.agregarAFlota(new AutoEspecial())
+		trafic.cambiarInterior(unInterior)
+		trafic.
+
+	}
+
+test"cultura"{
+	assert.notThat(cultura.esta)
+}
+
 }

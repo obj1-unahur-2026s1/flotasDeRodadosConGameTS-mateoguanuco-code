@@ -89,5 +89,60 @@ class AutoEspecial{
 }
 
 
+class Dependencia {
+
+  const flota = []
+  const empleados
+
+  method agregarAFlota(rodado){
+    flota.add(rodado)
+  } 
+
+  method quitarAFlota(rodado){
+    flota.remove(rodado)
+  } 
+
+  method pesoTotalFlota() {
+    return flota.sum({r => r.peso()})
+
+  } 
+
+  method estaBienEquipado(){
+    return flota.size() > 3 && self.todosPuedenIrA(100)
+  } 
+
+  method todosPuedenIrA(velocidad) {
+    return flota.all({r=> r.velocidad() <= velocidad})
+  } 
+}
+
+
+method capacidadTotalEnColor(color){
+  return self.rodadosDelColor(color).sum({r=> r.capacidad()})
+}
+
+
+method rodadosDelColor(color){
+  return flota.filter({r => r.color() == color})
+}
+
+method colorDelRodadoMasRapido(){
+  return self.rodadosMasRapido().color()
+}
+
+method rodadoMasRapido() = flota.max({r =mayor r.velocidad()})
+
+method capacidadFaltante(){
+  return (empleados - self.capacidadDeFlota()).max(0)
+
+
+}
+method capacidadDeFlora() = flota.sum(f=> f.capacidad())
+
+method esGrande() = empleados <= 40 && flota.size() > 2
+
+
+
+
 
 //""nqg rprn asn""
