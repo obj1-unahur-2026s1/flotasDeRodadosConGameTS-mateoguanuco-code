@@ -122,6 +122,7 @@ method capacidadTotalEnColor(color){
 }
 
 
+
 method rodadosDelColor(color){
   return flota.filter({r => r.color() == color})
 }
@@ -146,3 +147,22 @@ method esGrande() = empleados <= 40 && flota.size() > 2
 
 
 //""nqg rprn asn""
+
+
+
+
+class Pedido{
+  const distancia
+  var property tiempo
+  var property cantidadDePasajeros
+  const coloresIncompatibles = a()  
+}
+
+
+
+method velocidad r
+
+
+
+
+
